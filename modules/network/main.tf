@@ -29,5 +29,5 @@ resource "azurerm_public_ip" "pip" {
   resource_group_name = var.resource_group_name
   allocation_method   = "Dynamic"
 
-  domain_name_label = "matetask${random_integer.ri.result}"
+  domain_name_label = "${var.dns_label}${random_integer.ri.result}"
 }
