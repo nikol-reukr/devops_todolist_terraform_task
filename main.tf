@@ -1,3 +1,8 @@
+resource "azurerm_resource_group" "main" {
+  name     = var.resource_group_name
+  location = var.location
+}
+
 resource "azurerm_storage_account" "tfstate" {
   name                     = var.backend_storage_account_name
   resource_group_name      = var.resource_group_name
